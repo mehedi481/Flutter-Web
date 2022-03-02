@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-class SmallScreen extends StatelessWidget {
-  const SmallScreen({ Key? key }) : super(key: key);
+
+class MediumScreen extends StatelessWidget {
+  const MediumScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -8,7 +9,7 @@ class SmallScreen extends StatelessWidget {
     print(width);
     return Container(
       constraints: const BoxConstraints.expand(),
-      color: Colors.green,
+      color: Colors.yellow,
     );
   }
 }
