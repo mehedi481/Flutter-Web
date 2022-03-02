@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapp_santos/layout.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,19 +12,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       title: "Flutter Web Design",
-      home: HomePage(),
-    );
-  }
-}
-class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("This is body part...."),
+      theme: ThemeData(
+        backgroundColor: Colors.white,
+        textTheme:
+            GoogleFonts.mulishTextTheme(Theme.of(context).textTheme).apply(
+          bodyColor: Colors.black,
+        ),
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.iOS : FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android : FadeUpwardsPageTransitionsBuilder(),
+        }),
+        primaryColor: Colors.blue,
+      ),
+      home: const SiteLayout(),
     );
   }
 }
