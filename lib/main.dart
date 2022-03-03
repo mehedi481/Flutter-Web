@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapp_santos/constants/style.dart';
+import 'package:flutter_webapp_santos/controllers/menu_controller.dart';
 import 'package:flutter_webapp_santos/layout.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  Get.put(MenuController());
   runApp(const MyApp());
 }
 
