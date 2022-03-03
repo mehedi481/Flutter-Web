@@ -13,11 +13,16 @@ class SiteLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: topNavigationBar(context, scaffoldKey),
-        body: const ResponsiveWidget(
-          largeScreen: LargeScreen(),
-          smallScreen: SmallScreen(),
-          mediumScreen: MediumScreen(),
-        ));
+      key: scaffoldKey,
+      appBar: topNavigationBar(context, scaffoldKey),
+      drawer: const Drawer(
+        backgroundColor: Colors.red,
+      ),
+      body: const ResponsiveWidget(
+        largeScreen: LargeScreen(),
+        smallScreen: SmallScreen(),
+        mediumScreen: MediumScreen(),
+      ),
+    );
   }
 }

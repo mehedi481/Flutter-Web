@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapp_santos/constants/style.dart';
 import 'package:flutter_webapp_santos/layout.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,16 +14,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Flutter Web Design",
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: dark),
+          toolbarTextStyle: TextStyle(color: dark),
+          backgroundColor: Colors.transparent,
+        ),
         backgroundColor: Colors.white,
         textTheme:
             GoogleFonts.mulishTextTheme(Theme.of(context).textTheme).apply(
           bodyColor: Colors.black,
         ),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {
-          TargetPlatform.iOS : FadeUpwardsPageTransitionsBuilder(),
-          TargetPlatform.android : FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
         }),
         primaryColor: Colors.blue,
       ),
@@ -30,4 +37,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
