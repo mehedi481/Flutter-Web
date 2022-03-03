@@ -10,6 +10,9 @@ class MediumScreen extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints.expand(),
       color: Colors.yellow,
+      child: const Center(
+        child: Text("This is Medium Screen Size"),
+      ),
     );
   }
 }
