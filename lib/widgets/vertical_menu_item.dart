@@ -14,7 +14,6 @@ class VerticalMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _width = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: onTap,
       onHover: (value) {
